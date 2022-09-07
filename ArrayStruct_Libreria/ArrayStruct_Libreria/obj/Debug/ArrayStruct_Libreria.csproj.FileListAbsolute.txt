@@ -9,3 +9,14 @@ C:\Users\mayer\source\repos\ArrayStruct_Libreria\ArrayStruct_Libreria\obj\Debug\
 C:\Users\mayer\source\repos\ArrayStruct_Libreria\ArrayStruct_Libreria\obj\Debug\ArrayStruct_Libreria.csproj.CoreCompileInputs.cache
 C:\Users\mayer\source\repos\ArrayStruct_Libreria\ArrayStruct_Libreria\obj\Debug\ArrayStruct_Libreria.exe
 C:\Users\mayer\source\repos\ArrayStruct_Libreria\ArrayStruct_Libreria\obj\Debug\ArrayStruct_Libreria.pdb
+C:\Users\mayer\Documents\GitHub\StructArray\ArrayStruct_Libreria\ArrayStruct_Libreria\bin\Debug\ArrayStruct_Libreria.exe.config
+C:\Users\mayer\Documents\GitHub\StructArray\ArrayStruct_Libreria\ArrayStruct_Libreria\bin\Debug\ArrayStruct_Libreria.exe
+C:\Users\mayer\Documents\GitHub\StructArray\ArrayStruct_Libreria\ArrayStruct_Libreria\bin\Debug\ArrayStruct_Libreria.pdb
+C:\Users\mayer\Documents\GitHub\StructArray\ArrayStruct_Libreria\ArrayStruct_Libreria\obj\Debug\ArrayStruct_Libreria.csproj.AssemblyReference.cache
+C:\Users\mayer\Documents\GitHub\StructArray\ArrayStruct_Libreria\ArrayStruct_Libreria\obj\Debug\ArrayStruct_Libreria.csproj.SuggestedBindingRedirects.cache
+C:\Users\mayer\Documents\GitHub\StructArray\ArrayStruct_Libreria\ArrayStruct_Libreria\obj\Debug\ArrayStruct_Libreria.Form1.resources
+C:\Users\mayer\Documents\GitHub\StructArray\ArrayStruct_Libreria\ArrayStruct_Libreria\obj\Debug\ArrayStruct_Libreria.Properties.Resources.resources
+C:\Users\mayer\Documents\GitHub\StructArray\ArrayStruct_Libreria\ArrayStruct_Libreria\obj\Debug\ArrayStruct_Libreria.csproj.GenerateResource.cache
+C:\Users\mayer\Documents\GitHub\StructArray\ArrayStruct_Libreria\ArrayStruct_Libreria\obj\Debug\ArrayStruct_Libreria.csproj.CoreCompileInputs.cache
+C:\Users\mayer\Documents\GitHub\StructArray\ArrayStruct_Libreria\ArrayStruct_Libreria\obj\Debug\ArrayStruct_Libreria.exe
+C:\Users\mayer\Documents\GitHub\StructArray\ArrayStruct_Libreria\ArrayStruct_Libreria\obj\Debug\ArrayStruct_Libreria.pdb

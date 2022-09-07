@@ -10,14 +10,20 @@ using System.Windows.Forms;
 
 namespace ArrayStruct_Libreria
 {
-    struct Libros
+    public struct years
+    {
+        public int dia;
+        public int mes;
+        public int anyo;
+    }
+    public struct Libros
     {
        public string titulo;
        public  string edicion;
        public string genero;
        public string autor;
        public string pais;
-       public int year;
+       public years year;
     }
     public partial class Form1 : Form
     {   //Declaracion  del arreglo tipo estructura
@@ -33,12 +39,12 @@ namespace ArrayStruct_Libreria
         //Metodo para limpiar  los campos de texto
         void LimpiarCampos()
         {
-            textTitulo.Text = "";
-            textEdicion.Text = "";
-            comboGenero.Text = "";
-            textAutor.Text = "";
-            textPais.Text = "";
-            textYear.Text = "";
+            textTitulo.Clear();
+            textEdicion.Clear();
+            comboGenero.Text= ""; 
+            textAutor.Clear(); 
+            textPais.Clear();
+            textYear.Clear();
         }
         void Registrar()
         {
@@ -51,11 +57,14 @@ namespace ArrayStruct_Libreria
                     Lib[indice].genero =Convert.ToString( comboGenero.SelectedItem);
                     Lib[indice].autor = textAutor.Text;
                     Lib[indice].pais = textPais.Text;
-                    Lib[indice].year = Convert.ToInt32(textYear.Text);
+                    Lib[indice].year.dia = Convert.ToInt32(textYear.Text);
+                    Lib[indice].year.mes = Convert.ToInt32(textYear.Text);
+                    Lib[indice].year.anyo = Convert.ToInt32(textYear.Text);
                     indice++;
                 }
                 else
                 {
+                    MessageBox.Show("Error en eel registro de un libro");
 
                 }
             }
@@ -120,11 +129,60 @@ namespace ArrayStruct_Libreria
             }
 
         }
-        private void Form1_Load(object sender, EventArgs e)
+        public void GuardarCambios()
         {
+            try
+            {
+                if (textTitulo.Text != "" && textEdicion.Text != "" && comboGenero.Text != "")
+                {
+                    Lib[iModificar].titulo = textTitulo.Text;
+                    Lib[iModificar].edicion = textEdicion.Text;
+                    Lib[iModificar].genero = Convert.ToString(comboGenero.SelectedItem);
+                    Lib[iModificar].autor = textAutor.Text;
+                    Lib[iModificar].pais = textPais.Text;
+                    Lib[iModificar].year = Convert.ToInt32(textYear.Text);
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Todos los campos son obligatorios");
+
+                }
 
 
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error al guardar los cambios generados ", e.Message);
+
+            }
         }
+        public void  Eliminar()
+        {
+            try
+            {
+                for (int i = iModificar; i < indice; i++)
+                {
+                    Lib[i].titulo = Lib[i+1].titulo;
+                    Lib[i].edicion = Lib[i+1].edicion;
+                    Lib[i].genero = Lib[i+1].genero;
+                    Lib[i].autor = Lib[i+1].autor;
+                    Lib[i].pais = Lib[i+1].pais;
+                    Lib[i].year = Lib[i+1].year;
+
+                }
+                indice--;
+
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("AError al eliminar el registro", e.Message);
+
+            }
+        }
+            
+
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
@@ -136,13 +194,26 @@ namespace ArrayStruct_Libreria
         {
             btnModificar.Enabled=true;
             btnGuardar.Enabled = false;
+            GuardarCambios();
+            MostarRegistros();
 
-
-        }
+        } 
+        
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             BuscarRegistro();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            MostarRegistros();
+            Eliminar();
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
